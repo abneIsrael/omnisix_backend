@@ -1,0 +1,13 @@
+# node.js
+#
+node_modules/
+
+#enviroment variables
+#
+.env
+
+#Aplication
+
+#Only the content from tmp directory
+tmp/*
+!tmp/.gitkeep
