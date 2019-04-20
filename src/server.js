@@ -26,7 +26,7 @@ io.on("connection", socket => { //parametro socket representa a conexao do clien
 
 });
 
-const mongoURL = process.env.MONGOURL || MONGODB_URL_CONNECTION;
+const mongoURL = process.env.MONGOURL || process.env.MONGODB_URL_CONNECTION;
 mongoose.connect(mongoURL, {
     useNewUrlParser: true
 }); //estabelece conexao com MongoBD
