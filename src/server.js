@@ -56,6 +56,6 @@ app.use(require('./routes'));
 // }); //roda o app nessa porta
 
 //torna nossa aplicacao node capaz de receber requisicoes http e ws(websocket)
-server.listen(3000, ()=>{
+server.listen(process.env.PORT, ()=>{ //configuramos a variavel PORT no Heroku
     console.log("Server is Running :D");
 }); //roda o app nessa porta

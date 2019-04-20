@@ -18,7 +18,9 @@ const File = new mongoose.Schema({
 
 //define o campo virtual com o nome url, e com um conteudo
 File.virtual("url").get(function() {
-    return `http://localhost:3000/files/${encodeURIComponent(this.path)}`;
+    const url = process.env.URL || 'http://localhost:3000'; // a variavel URL definiremos la no heroku
+
+    return `${url}/files/${encodeURIComponent(this.path)}`;
 })
 
 module.exports = mongoose.model('File', File);
